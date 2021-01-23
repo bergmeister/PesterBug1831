@@ -4,7 +4,7 @@ environment:
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
 install:
-  - ps: nuget install Pester -Version 5.1.0 -source https://www.powershellgallery.com/api/v2 -outputDirectory "$env:ProgramFiles\WindowsPowerShell\Modules\." -ExcludeVersion
+  - ps: nuget install Pester -Version 5.1.1 -source https://www.powershellgallery.com/api/v2 -outputDirectory "$env:ProgramFiles\WindowsPowerShell\Modules\." -ExcludeVersion
 
 build_script:
   - ps: Write-Verbose 'Building...' -Verbose

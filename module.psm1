@@ -3,3 +3,5 @@ function MyAssertHelper {
 
 	'test' | Should -Be 'test'
 }
+
+Export-ModuleMember -Function MyAssertHelper

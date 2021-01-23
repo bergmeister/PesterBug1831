@@ -1,15 +1,10 @@
 environment:
   matrix:
     - APPVEYOR_BUILD_WORKER_IMAGE: WMF 4
-      PowerShellEdition: WindowsPowerShell
-      PSVersion: 4
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
-    PowerShellEdition: PowerShellCore
-
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
 install:
   - ps: nuget install Pester -Version 5.1.0 -source https://www.powershellgallery.com/api/v2 -outputDirectory "$env:ProgramFiles\WindowsPowerShell\Modules\." -ExcludeVersion
-
 
 test_script:
   - ps: Invoke-Pester

@@ -10,4 +10,4 @@ build_script:
   - ps: Write-Verbose 'Building...' -Verbose
 
 test_script:
-  - ps: Invoke-Pester
+  - ps: Import-Module Pester -Minimumversion 5.1; Invoke-Pester

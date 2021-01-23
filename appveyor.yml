@@ -7,7 +7,7 @@ install:
   - ps: nuget install Pester -Version 5.1.0 -source https://www.powershellgallery.com/api/v2 -outputDirectory "$env:ProgramFiles\WindowsPowerShell\Modules\." -ExcludeVersion
 
 build_script:
-  - ps: 'Building...'
+  - ps: Write-Verbose 'Building...' -Verbose
 
 test_script:
   - ps: Invoke-Pester

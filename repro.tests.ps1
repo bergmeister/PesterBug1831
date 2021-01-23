@@ -1,5 +1,5 @@
 BeforeAll {
-	Import-Module (Join-Path $PSScriptRoot "module.psm1")
+	Import-Module (Join-Path $PSScriptRoot "assertmodule.psm1")
 }
 
 Describe "DescribeName" {

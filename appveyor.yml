@@ -10,4 +10,4 @@ build_script:
   - ps: Write-Verbose 'Building...' -Verbose
 
 test_script:
-  - ps: Import-Module Pester -Minimumversion 5.1; (Get-Command Invoke-Pester).Module.Version; Invoke-Pester
+  - ps: Import-Module testmodule; Invoke-Test
